@@ -25,26 +25,49 @@ img {
 	object-fit: cover;
 }
 
-.image{
-    width: 30%;
-    height: 60%;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
+.image {
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-.image img{
-    position: absolute;
-    height: 140%;
-    left: 40%;
-    transform: translate(-55%);
-    bottom: 0;
-    transition: left 2s ease;
+.image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    transform: none;
+    transition: none;
 }
 
-.image:hover .girl{
-    left: 55%;
+.image:hover .isuru {
+    left: 0; /* Adjust as needed for mobile layout */
 }
+
+/* Additional Styling for Larger Screens if Needed */
+@media only screen and (min-width: 768px) {
+    .image {
+        width: 30%;
+        height: 60%;
+        position: absolute;
+        right: 100px;
+        bottom: 0;
+    }
+
+    .image img {
+        position: absolute;
+        height: 140%;
+        left: 40%;
+        transform: translate(-55%);
+        bottom: 0;
+        transition: left 2s ease;
+    }
+
+    .image:hover .isuru {
+        left: 55%;
+    }
+}
+
 p {
 	color: black;
 	font-size: 1.4rem;
@@ -288,13 +311,15 @@ p {
 
 /* End Hero Section */
 
-/* Services Section */
+/* skill Section */
 
 
 
-/* End Services Section */
+/*End skill Section */
 
 /* Projects section */
+
+
 #projects .projects {
 	flex-direction: column;
 	max-width: 1500px;
@@ -322,6 +347,36 @@ p {
 	overflow: hidden;
 	border-radius: 10px;
 }
+
+/* Style the project actions (icon + button) */
+.project-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+	font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #11e156;
+}
+
+/* Style the icon */
+.fa-info-circle {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
 #projects .project-info {
 	padding: 30px;
 	flex-basis: 50%;
